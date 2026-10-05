@@ -1,22 +1,38 @@
-nums = [0,1,0,3,12]
+nums = [0, 1, 0, 3, 12]
 
-moved_list = []
+position = 0
 
-count = 0
+for i in range(len(nums)):
 
-for num in nums:
+    if nums[i] != 0:
+      
+      nums[position], nums[i] = nums[i], nums[position]
+      
+      position += 1
+
+print(nums)
+
+
+
+# nums = [0,1,0,3,12]
+
+# moved_list = []
+
+# count = 0
+
+# for num in nums:
   
-  if num==0:
+#   if num==0:
     
-    count+=1
+#     count+=1
     
-  else:
+#   else:
     
-    moved_list.append(num)
+#     moved_list.append(num)
     
-for c in range(0,count):
+# for c in range(0,count):
   
-  moved_list.append(0)
+#   moved_list.append(0)
   
-print(moved_list)
+# print(moved_list)
     

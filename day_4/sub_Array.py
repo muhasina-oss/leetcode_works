@@ -1,17 +1,18 @@
 nums = [-2,1,-3,4,-1,2,1,-5,4]
 
-largest = nums[0]
+maxSum = nums[0]
 
-for i in range(0,len(nums)):
+currentSum = 0
+
+for num in nums:
   
-  total = nums[i]
+  if currentSum < 0 :
+    
+    currentSum = 0
+    
+  currentSum+=num
   
-  for j in range(i+1,len(nums)):
-    
-    total+=nums[j]
-    
-    if total>largest:
-    
-     largest=total
-    
-print(largest)
+  maxSum = max(currentSum,maxSum)
+  
+print(maxSum)
+
