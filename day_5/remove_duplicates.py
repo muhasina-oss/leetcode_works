@@ -1,16 +1,16 @@
-nums = [1,2,2,3,3,4,5]
+nums = [1, 2, 2, 3, 3, 4, 5]
 
-p1 = len(nums)-1
+p1 = 0
+p2 = 1
 
+while p2 < len(nums):
 
-while p1-1>=0:
-  
-  if nums[p1]==nums[p1-1]:
+  if nums[p1] != nums[p2]:
     
-    nums.remove(nums[p1])
-    
-  p1-=1
-  
-print(len(nums))
-  
-  
+      p1 += 1
+      
+      nums[p1] = nums[p2]
+
+  p2 += 1
+
+print(p1 + 1)

@@ -1,9 +1,9 @@
 nums = [4, 1, 2, 1, 2]
 
+single = 0
+
 for num in nums:
   
-  if nums.count(num)==1:
-    
-    print(num)
-    
-    break
+  single = single ^ num
+
+print(single)
